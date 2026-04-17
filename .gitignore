@@ -182,9 +182,15 @@ cython_debug/
 .abstra/
 
 # Visual Studio Code
+HEAD
 #  Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore 
 #  that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
 #  and can be added to the global gitignore or merged into this file. However, if you prefer, 
+
+#  Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore
+#  that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
+#  and can be added to the global gitignore or merged into this file. However, if you prefer,
+15672e9 (ansible: initialize project structure and quality gates)
 #  you could uncomment the following to ignore the entire vscode folder
 # .vscode/
 
@@ -205,3 +211,27 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+HEAD
+
+
+#Terraform Specifics
+.terraform/
+terraform.tfstate
+terraforn.tfvars
+terraform.tfstate.backup
+
+# Ansible Specifics
+*.retry
+*.log
+.ansible/
+facts.d/
+
+# Ansible Vault (If you use local password files)
+.vault_pass
+vault.txt
+
+# Sensitive local inventory details
+inventory.ini
+*.pem
+*.key
+>>>>>>> 15672e9 (ansible: initialize project structure and quality gates)
