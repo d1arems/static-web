@@ -1,7 +1,7 @@
 ---
 - name: Prepare Web Servers
   hosts: webservers
-  become: yes
+  become: true
   vars:
     app_source: "./files/index.html"
     app_dest: "/var/www/html/index.html"
@@ -11,13 +11,13 @@
       apt:
         name: nginx
         state: present
-        update_cache: yes
+        update_cache: true
 
     - name: Ensure Nginx is started and enabled
       service:
         name: nginx
         state: started
-        enabled: yes
+        enabled: true
 
     - name: Deploy Finance App Static Content
       copy:
